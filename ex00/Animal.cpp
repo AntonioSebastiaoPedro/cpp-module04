@@ -6,7 +6,7 @@
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 09:42:03 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/09 10:39:53 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/09 13:22:58 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,5 @@ std::string Animal::getType( void ) const
 
 void Animal::makeSound( void ) const
 {
-	std::cout << "The Animal makes a song\n";
+	std::cout << "The Animal maded a sound\n";
 }
