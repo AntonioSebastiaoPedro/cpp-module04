@@ -1,35 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongCat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 09:42:03 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/09 13:36:03 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/09 11:26:41 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Animal.hpp"
-# include "Cat.hpp"
-# include "Dog.hpp"
+# include "WrongCat.hpp"
 
-int main( void )
+WrongCat::WrongCat( void )
 {
-	const Animal* meta = new Animal();
-	const Animal* i = new Cat();
-	const Animal* j = new Dog();
-	
-	std::cout << i->getType() << " " << std::endl;
-	std::cout << j->getType() << " " << std::endl;
-	
-	i->makeSound();
-	j->makeSound();
-	meta->makeSound();
+	this->type = "WrongCat";
+	std::cout << "WrongCat Default constructor called\n";
+}
 
-	delete i;
-	delete j;
-	delete meta;
-	
-	return (0);
+WrongCat::WrongCat( const WrongCat& WrongCat )
+{
+	std::cout << "WrongCat Copy constructor called\n";
+	*this = WrongCat;
+}
+
+WrongCat& WrongCat::operator=(const WrongCat& WrongCat)
+{
+	if (this != &WrongCat)
+	{
+		this->type = WrongCat.getType();	
+	}
+	return ( *this );
+}
+
+WrongCat::~WrongCat( )
+{
+	std::cout << "WrongCat Destructor called\n";
+}
+
+void WrongCat::makeSound( void ) const
+{
+	std::cout << "The WrongCat meowed\n";
 }
