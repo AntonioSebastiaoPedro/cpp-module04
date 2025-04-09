@@ -1,30 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 09:42:03 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/09 11:22:23 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/09 11:26:41 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Animal.hpp"
 # include "Cat.hpp"
 
-int main( void )
+Cat::Cat( void )
 {
-	const Animal* meta = new Animal();
-	const Animal* i = new Cat();
-	
-	std::cout << i->getType() << " " << std::endl;
-	
-	i->makeSound();
-	meta->makeSound();
+	this->type = "Cat";
+	std::cout << "Cat Default constructor called\n";
+}
 
-	delete i;
-	delete meta;
-	
-	return (0);
+Cat::Cat( const Cat& cat )
+{
+	std::cout << "Cat Copy constructor called\n";
+	*this = cat;
+}
+
+Cat& Cat::operator=(const Cat& cat)
+{
+	if (this != &cat)
+	{
+		this->type = cat.getType();	
+	}
+	return ( *this );
+}
+
+Cat::~Cat( )
+{
+	std::cout << "Cat Destructor called\n";
+}
+
+void Cat::makeSound( void ) const
+{
+	std::cout << "The Cat meowed\n";
 }
