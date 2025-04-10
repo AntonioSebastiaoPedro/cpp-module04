@@ -6,7 +6,7 @@
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 13:59:01 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/10 15:29:02 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/10 16:21:45 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,9 @@ std::string Brain::getIdea( int position ) const
 	return ( this->ideas[position % 100] );	
 }
 
-void Brain::setIdeas( std::string ideas[100] )
+void Brain::setIdeas( int position, std::string ideas )
 {
-	for ( int i = 0; i < 100; i++ )
-	{
-		this->ideas[i] = ideas[i];
-	}
+	this->ideas[position % 100] = ideas;
 }
 
 std::ostream& operator<<( std::ostream& stream, const Brain& brain )

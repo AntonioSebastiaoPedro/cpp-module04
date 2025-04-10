@@ -6,7 +6,7 @@
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 13:51:06 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/10 15:16:45 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/10 16:22:04 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Brain
 		~Brain();
 
 		std::string getIdea( int position ) const;
-		void setIdeas( std::string ideas[100] );
+		void setIdeas( int position, std::string ideas );
 };
 std::ostream& operator<<( std::ostream& stream, const Brain& brain );
 
