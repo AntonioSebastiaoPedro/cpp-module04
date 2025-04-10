@@ -6,7 +6,7 @@
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 09:42:03 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/10 15:14:13 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/10 16:20:09 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,24 @@
 
 int main( void )
 {
-	Brain brain1;
+	const int length_animals = 10;
+	Animal **animals = new Animal*[length_animals];
 	
-	std::cout << brain1;
+	for (int i = 0; i < length_animals; i++)
+	{
+		if (i < length_animals / 2)
+			animals[i] = new Dog();
+		else
+			animals[i] = new Cat();
+	}
+	for (int i = 0; i < length_animals; i++)
+	{
+		animals[i]->makeSound();
+	}
+	for (int i = 0; i < length_animals; i++)
+	{
+		delete animals[i];
+	}
+	delete[] animals;
 	return (0);
 }
