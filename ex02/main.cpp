@@ -6,7 +6,7 @@
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 09:42:03 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/10 16:59:41 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/10 17:04:55 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 int main( void )
 {
 	const int length_animals = 10;
-	Animal **animals = new Animal*[length_animals];
+	AAnimal **animals = new AAnimal*[length_animals];
 	
 	for (int i = 0; i < length_animals; i++)
 	{

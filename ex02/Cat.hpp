@@ -6,7 +6,7 @@
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 09:42:03 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/10 15:45:02 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/10 17:04:22 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include "Animal.hpp"
 # include "Brain.hpp"
 
-class Cat : public Animal
+class Cat : public AAnimal
 {	
 	private:
 		Brain* brain;

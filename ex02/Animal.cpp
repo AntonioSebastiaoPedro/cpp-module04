@@ -6,24 +6,24 @@
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 09:42:03 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/10 16:01:58 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/10 17:04:02 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Animal.hpp"
 
-Animal::Animal( void )
+AAnimal::AAnimal( void )
 {
 	std::cout << "Animal Default constructor called\n";
 }
 
-Animal::Animal( const Animal& animal )
+AAnimal::AAnimal( const AAnimal& animal )
 {
 	std::cout << "Animal Copy constructor called\n";
 	*this = animal;
 }
 
-Animal& Animal::operator=(const Animal& animal)
+AAnimal& AAnimal::operator=(const AAnimal& animal)
 {
 	if (this != &animal)
 	{
@@ -32,22 +32,22 @@ Animal& Animal::operator=(const Animal& animal)
 	return ( *this );
 }
 
-Animal::~Animal( )
+AAnimal::~AAnimal( )
 {
 	std::cout << "Animal Destructor called\n";
 }
 
-void Animal::setType( std::string type )
+void AAnimal::setType( std::string type )
 {
 	this->type = type;
 }
 
-std::string Animal::getType( void ) const
+std::string AAnimal::getType( void ) const
 {
 	return ( this->type );
 }
 
-void Animal::makeSound( void ) const
+void AAnimal::makeSound( void ) const
 {
 	std::cout << "The Animal maded a sound\n";
 }

@@ -6,7 +6,7 @@
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 09:42:03 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/10 16:56:10 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/10 17:03:17 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 
 # include <iostream>
 
-class Animal
+class AAnimal
 {
 	protected:
 		std::string type;
 	
 	public:
-		Animal( void );
-		Animal( const Animal& animal );
-		Animal& operator=(const Animal& animal);
-		virtual ~Animal( );
+		AAnimal( void );
+		AAnimal( const AAnimal& animal );
+		AAnimal& operator=(const AAnimal& animal);
+		virtual ~AAnimal( );
 		
 		void setType( std::string type );
 		std::string getType( void ) const;
