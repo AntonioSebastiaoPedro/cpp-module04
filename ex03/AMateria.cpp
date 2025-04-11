@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Materia.cpp                                        :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 19:16:25 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/11 07:58:12 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/11 08:27:48 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Materia.hpp"
+# include "AMateria.hpp"
 
 AMateria::AMateria()
 {
@@ -50,5 +50,5 @@ std::string const & AMateria::getType() const
 
 void AMateria::use(ICharacter& target)
 {
-	std::cout << "Using a default materia\n";
+	std::cout << "Using a default materia with " << target.getName() <<  std::endl;
 }

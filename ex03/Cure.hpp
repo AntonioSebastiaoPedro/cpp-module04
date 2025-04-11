@@ -6,7 +6,7 @@
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 08:00:54 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/11 08:02:01 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/11 08:11:08 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define CURE_HPP
 
 # include <iostream>
-# include "Materia.hpp"
+# include "AMateria.hpp"
 
 class Cure : virtual public AMateria
 {

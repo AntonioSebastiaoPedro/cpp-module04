@@ -6,7 +6,7 @@
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 20:38:42 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/10 20:45:47 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/11 08:26:50 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Ice::Ice()
 	this->type = "ice";
 }
 
-Ice::Ice( const Ice& ice )
+Ice::Ice( const Ice& ice ): AMateria(ice)
 {
 	std::cout << "Ice Copy constructor called\n";
 	*this = ice;

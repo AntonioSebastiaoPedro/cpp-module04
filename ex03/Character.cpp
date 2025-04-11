@@ -6,7 +6,7 @@
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 17:40:45 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/11 07:57:40 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/11 08:25:14 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,10 @@ Character& Character::operator=( const Character& character )
 Character::~Character()
 {
 	std::cout << "Character destructor called\n";
-	delete[] this->inventory;
+	for (int i = 0; i < 4; i++)
+	{
+		delete this->inventory[i];
+	}
 }
 
 void Character::equip( AMateria& m )
@@ -65,7 +68,7 @@ void Character::unequip( int idx )
 	}
 }
 
-void Character::use( int idx, Character& target )
+void Character::use( int idx, ICharacter& target )
 {
 	if ( idx >= 0 && idx <= 3 )
 	{

@@ -6,7 +6,7 @@
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 08:00:49 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/11 08:08:46 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/11 08:26:32 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ Cure::Cure()
 	this->type = "Cure";
 }
 
-Cure::Cure( const Cure& Cure )
+Cure::Cure( const Cure& cure ) : AMateria(cure)
 {
 	std::cout << "Cure Copy constructor called\n";
-	*this = Cure;
+	*this = cure;
 }
 
 Cure& Cure::operator=( const Cure& Cure )
