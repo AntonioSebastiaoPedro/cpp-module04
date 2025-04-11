@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Materia.hpp                                        :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 17:28:06 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/10 20:58:41 by ansebast         ###   ########.fr       */
+/*   Created: 2025/04/10 20:35:03 by ansebast          #+#    #+#             */
+/*   Updated: 2025/04/10 20:40:46 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef MATERIA_HPP
-# define MATERIA_HPP
+# ifndef ICE_HPP
+# define ICE_HPP
 
 # include <iostream>
-# include "ICharacter.hpp"
+# include "Materia.hpp"
 
-class AMateria
+class Ice : virtual public AMateria
 {
-	protected:
-		std::string type;
 	public:
-		AMateria();
-		AMateria( const std::string type );
-		AMateria( const AMateria& materia );
-		virtual AMateria& operator=( const AMateria& materia );
-		virtual ~AMateria();
+		Ice();
+		Ice( const Ice& ice );
+		Ice& operator=( const Ice& ice );
+		~Ice();
 
-		std::string const & getType() const;
-		virtual AMateria* clone() const = 0;
-		virtual void use(ICharacter& target);
+		Ice* clone() const;
+		void use(ICharacter& target);
 };
 
 # endif
