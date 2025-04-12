@@ -6,7 +6,7 @@
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 09:42:03 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/10 16:03:20 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/12 10:42:22 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ Cat& Cat::operator=(const Cat& cat)
 {
 	if (this != &cat)
 	{
+		if (this->brain)
+			delete brain;
 		this->type = cat.getType();
 		this->brain = new Brain(*cat.brain);
 	}
