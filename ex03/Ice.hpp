@@ -6,7 +6,7 @@
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 20:35:03 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/11 08:11:08 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/12 10:00:39 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Ice : virtual public AMateria
 		Ice& operator=( const Ice& ice );
 		~Ice();
 
-		Ice* clone() const;
+		AMateria* clone() const;
 		void use(ICharacter& target);
 };
 

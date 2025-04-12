@@ -6,7 +6,7 @@
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 08:00:54 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/11 08:11:08 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/12 10:00:21 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Cure : virtual public AMateria
 		Cure& operator=( const Cure& Cure );
 		~Cure();
 
-		Cure* clone() const;
+		AMateria* clone() const;
 		void use(ICharacter& target);
 };
 

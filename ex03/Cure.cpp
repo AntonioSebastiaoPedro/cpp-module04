@@ -6,44 +6,40 @@
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 08:00:49 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/11 08:26:32 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/12 10:05:52 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Cure.hpp"
 
-Cure::Cure()
+Cure::Cure() : AMateria("cure")
 {
-	std::cout << "Cure default constructor called\n";
-	this->type = "Cure";
 }
 
 Cure::Cure( const Cure& cure ) : AMateria(cure)
 {
-	std::cout << "Cure Copy constructor called\n";
-	*this = cure;
 }
 
-Cure& Cure::operator=( const Cure& Cure )
+Cure& Cure::operator=( const Cure& cure )
 {
-	if ( this != &Cure )
+	if ( this != &cure )
 	{
-		this->type = Cure.getType();
+		AMateria::operator=(cure);
 	}
 	return ( *this );
 }
 
 Cure::~Cure()
 {
-	std::cout << "Cure destructor called\n";
+	// std::cout << "Cure destructor called\n";
 }
 
-Cure* Cure::clone() const
+AMateria* Cure::clone() const
 {
-	return ( new Cure() );
+	return ( new Cure(*this) );
 }
 
 void Cure::use(ICharacter& target)
 {
-	std::cout << "* heals " << target.getName() << " wounds *";
+	std::cout << "* heals " << target.getName() << "'s wounds *\n";
 }

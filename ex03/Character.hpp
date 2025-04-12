@@ -6,7 +6,7 @@
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 17:40:45 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/11 08:37:50 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/12 08:35:57 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ class Character : public ICharacter
 		Character& operator=( const Character& Character );
 		~Character();
 		
-		void equip( AMateria& m );
+		std::string const & getName( void ) const;
+		void equip( AMateria* m );
 		void unequip( int idx );
 		void use( int idx, ICharacter& target );
 };

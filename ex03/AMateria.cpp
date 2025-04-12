@@ -6,7 +6,7 @@
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 19:16:25 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/11 08:27:48 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/12 08:40:17 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 AMateria::AMateria()
 {
-	std::cout << "Material default constructor called\n";
+	// std::cout << "Material default constructor called\n";
 	this->type = "Default";
 }
 
 AMateria::AMateria( const std::string type ) : type(type)
 {
-	std::cout << "Material Type constructor called\n";
+	// std::cout << "Material Type constructor called\n";
 }
 
 AMateria::AMateria( const AMateria& materia )
 {
-	std::cout << "Material Copy constructor called\n";
+	// std::cout << "Material Copy constructor called\n";
 	*this = materia;
 }
 
@@ -40,7 +40,7 @@ AMateria& AMateria::operator=( const AMateria& materia )
 
 AMateria::~AMateria()
 {
-	std::cout << "Material destructor called\n";
+	// std::cout << "Material destructor called\n";
 }
 
 std::string const & AMateria::getType() const
