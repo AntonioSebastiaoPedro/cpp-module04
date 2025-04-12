@@ -6,7 +6,7 @@
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 08:46:57 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/12 09:51:43 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/12 10:21:49 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 MateriaSource::MateriaSource()
 {
-	// std::cout << "MateriaSource default constructor called\n";
 	for (int i = 0; i < 4; i++)
 	{
 		this->materias[i] = NULL;
@@ -23,7 +22,6 @@ MateriaSource::MateriaSource()
 
 MateriaSource::MateriaSource( const MateriaSource& matSource )
 {
-	// std::cout << "MateriaSource copy constructor called\n";
 	for (int i = 0; i < 4; i++)
 	{
 		if (matSource.materias[i]){
@@ -54,7 +52,6 @@ MateriaSource& MateriaSource::operator=( const MateriaSource& matSource )
 
 MateriaSource::~MateriaSource()
 {
-	// std::cout << "MateriaSource destructor called\n";
 	for (int i = 0; i < 4; i++)
 	{
 		if ( this->materias[i] )

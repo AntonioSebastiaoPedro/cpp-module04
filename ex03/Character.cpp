@@ -6,7 +6,7 @@
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 17:40:45 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/12 09:56:14 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/12 10:19:05 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 Character::Character()
 {
 	this->name = "Default";
-	// std::cout << "Character default constructor called\n";
 	this->inventory[0] = NULL;
 	this->inventory[1] = NULL;
 	this->inventory[2] = NULL;
@@ -24,7 +23,6 @@ Character::Character()
 
 Character::Character( std::string name ) : name(name)
 {
-	// std::cout << "Character name constructor called\n";
 	this->inventory[0] = NULL;
 	this->inventory[1] = NULL;
 	this->inventory[2] = NULL;
@@ -33,7 +31,6 @@ Character::Character( std::string name ) : name(name)
 
 Character::Character( const Character& character )
 {
-	// std::cout << "Character copy constructor called\n";
 	this->name = character.name;
 	for (int i = 0; i < 4; i++)
 	{
@@ -66,7 +63,6 @@ Character& Character::operator=( const Character& character )
 
 Character::~Character()
 {
-	// std::cout << "Character destructor called\n";
 	for (int i = 0; i < 4; i++)
 	{
 		if (this->inventory[i]) {

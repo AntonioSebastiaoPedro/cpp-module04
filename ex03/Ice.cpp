@@ -6,7 +6,7 @@
 /*   By: ansebast <ansebast@student.42luanda.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 20:38:42 by ansebast          #+#    #+#             */
-/*   Updated: 2025/04/12 10:05:45 by ansebast         ###   ########.fr       */
+/*   Updated: 2025/04/12 10:23:30 by ansebast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ Ice& Ice::operator=( const Ice& ice )
 
 Ice::~Ice()
 {
-	// std::cout << "Ice destructor called\n";
 }
 
 AMateria* Ice::clone() const
